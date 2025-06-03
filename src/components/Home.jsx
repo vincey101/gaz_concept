@@ -44,9 +44,6 @@ function Home() {
         seconds: 14
     });
 
-    // Add state for showing more cards
-    const [showMoreCards, setShowMoreCards] = useState(false);
-
     // Add new state for search box
     const [searchValues, setSearchValues] = useState({
         destination: 'UK to Japan',
@@ -61,6 +58,9 @@ function Home() {
         price: false,
         date: false
     });
+
+    // Add state for showing more cards
+    const [showMoreCards, setShowMoreCards] = useState(false);
 
     // Predefined options
     const destinations = [
