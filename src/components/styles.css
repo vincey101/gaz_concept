@@ -144,6 +144,11 @@ html {
     margin-bottom: 0.2rem;
 }
 
+.hero-title h1 span:nth-child(2) {
+    display: block;
+    width: 100%;
+}
+
 .hero-title p {
     font-size: 1.5rem;
     font-weight: 300;
@@ -1141,37 +1146,47 @@ html {
     }
 
     .nav-logo img {
-        height: 50px;
+        height: 100px;
+        width: auto;
     }
 
     .mobile-menu-btn {
-        font-size: 1.8rem;
-        padding: 0.3rem;
+        font-size: 2.5rem;
+        padding: 0.5rem;
     }
 
     .hero-content {
-        margin-top: 400px;
-        margin-bottom: 30px;
-        text-align: center;
-        padding: 0 1rem;
+        margin-top: 30px;
+        text-align: left;
+        padding: 0 2rem;
     }
 
     .hero-title {
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 50px;
+        text-align: left;
+        margin: 0;
     }
 
     .hero-title h1 {
-        font-size: 1.5rem;
-        align-items: center;
-        margin-bottom: 1.2rem;
+        font-size: 3.5rem;
+        font-weight: 400;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-title h1 span:first-child {
+        font-size: 4rem;
+        width: 100%;
+        display: block;
     }
 
     .hero-title p {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 10rem;
+        font-size: 3rem;
+        text-align: left;
+        font-style: italic;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        line-height: 1.3;
     }
 
     .hero-section {
@@ -1182,9 +1197,9 @@ html {
     .search-box {
         width: 90%;
         bottom: 520px;
-        padding: 0.5rem;
+        padding: 0.8rem;
         height: auto;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         margin-bottom: 1rem;
         z-index: 1500;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1192,14 +1207,14 @@ html {
 
     .search-content {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 0 0.5rem;
+        gap: 0.8rem;
+        padding: 0.4rem;
     }
 
     .search-item {
         width: 100%;
         min-width: 0;
-        padding: 0.3rem;
+        padding: 0.6rem;
         height: auto;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -1209,27 +1224,27 @@ html {
     }
 
     .search-label {
-        font-size: 12px;
-        padding-left: 22px;
-        margin-bottom: 0;
+        font-size: 1rem;
+        padding-left: 26px;
+        margin-bottom: 0.2rem;
     }
 
     .search-value {
-        font-size: 0.8rem;
-        padding-left: 22px;
+        font-size: 1.2rem;
+        padding-left: 26px;
     }
 
     .search-icon {
-        width: 16px;
-        height: 16px;
-        top: -4px;
+        width: 20px;
+        height: 20px;
+        top: -5px;
     }
 
     .book-btn {
-        width: 80%;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
-        font-size: 0.9rem;
+        width: 90%;
+        margin: 0.8rem auto;
+        padding: 0.8rem;
+        font-size: 1.1rem;
     }
 
     .cards-grid {
@@ -1251,9 +1266,18 @@ html {
     }
 
     .why-choose-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+        max-width: 350px;
         margin: 0 auto;
+    }
+
+    .why-choose-card {
+        max-width: 280px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .testimonial-images {
@@ -1335,25 +1359,30 @@ html {
     }
 
     .dropdown-item {
-        padding: 0.8rem 1rem;
-        text-align: center;
-        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 1.3rem;
+        color: #DA9B2A;
+        font-weight: 500;
+    }
+
+    .search-dropdown.calendar {
+        padding: 0.8rem;
+    }
+
+    .search-dropdown.calendar input {
+        padding: 0.8rem;
+        font-size: 1.3rem;
         width: 100%;
     }
 
     .wave-container {
-        bottom: -200px;
-        height: 600px;
-        overflow: visible;
         position: relative;
+        height: 600px;
+        background-color: #DA9B2A;
     }
 
     .wave-svg {
-        bottom: -50px;
-        left: -5%;
-        width: 110%;
-        height: 180%;
-        transform: scale(1.8, 1.5) translateY(20px);
+        display: none;
     }
 
     .country-wave-svg {
@@ -1380,18 +1409,16 @@ html {
     }
 
     .intro-section h3 {
-        font-size: 0.85rem;
-        margin-bottom: 0.3rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
     }
 
     .intro-section p {
-        font-size: 0.6rem;
-        line-height: 1.25;
+        font-size: 1.2rem;
+        line-height: 1.4;
         white-space: normal;
-        opacity: 0.9;
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 800px;
     }
 
     .cards-section {
@@ -1400,6 +1427,7 @@ html {
         z-index: 5;
         padding-top: 20px;
         padding-bottom: 20px;
+        background-color: #DA9B2A;
     }
 
     .cards-grid {
@@ -1435,42 +1463,42 @@ html {
     }
 
     .countdown-section h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #1A1A1A;
-        margin-bottom: 0.3rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
     }
 
     .countdown-section p {
-        font-size: 0.65rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
 
     .timer-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.8rem;
-        margin-bottom: 1.5rem;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        padding: 0 1.5rem;
     }
 
     .timer-box {
-        min-width: 60px;
-        padding: 0.8rem 0.5rem;
+        min-width: 140px;
+        padding: 1.2rem;
     }
 
     .timer-box .number {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .timer-box .label {
-        font-size: 0.7rem;
+        font-size: 1rem;
+        margin-top: 0.5rem;
     }
 
     .view-tour {
-        padding: 0.4rem 1.5rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
     }
 
     .why-choose-section {
@@ -1479,13 +1507,14 @@ html {
     }
 
     .why-choose-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.3rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
     }
 
     .why-choose-section>p {
-        font-size: 0.7rem;
-        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.4;
     }
 
     .why-choose-grid {
@@ -1529,13 +1558,34 @@ html {
     }
 
     .tour-deals h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.2rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
 
     .tour-deals p {
-        font-size: 0.7rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+
+    .tour-info h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
+    }
+
+    .tour-info>span {
+        font-size: 1.2rem;
         margin-bottom: 1.2rem;
+    }
+
+    .tour-info p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin-bottom: 1.8rem;
+        padding: 0 0.8rem;
     }
 
     .journey-section {
@@ -1544,13 +1594,15 @@ html {
     }
 
     .journey-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.3rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
     }
 
     .journey-subtitle {
-        font-size: 0.7rem;
-        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.4;
     }
 
     .testimonial-images {
@@ -1565,13 +1617,21 @@ html {
     }
 
     .partners-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.3rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
     }
 
     .partners-subtitle {
-        font-size: 0.7rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+
+    .partner-cta {
+        font-size: 1.1rem;
+        margin-bottom: 1.8rem;
+        line-height: 1.4;
     }
 
     .partner-logos {
@@ -1587,67 +1647,211 @@ html {
         min-width: 150px;
         padding: 0.4rem 1.2rem;
     }
+
+    .tour-features {
+        gap: 0.8rem;
+        padding: 0 1rem;
+    }
+
+    .feature {
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .feature .dot {
+        width: 10px;
+        height: 10px;
+        background: #87298A;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .feature span:not(.dot) {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .reviewer-name {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        padding: 0 1.5rem;
+    }
+
+    .rating {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .rating-label {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .stars {
+        gap: 0.3rem;
+    }
+
+    .star {
+        font-size: 1.4rem;
+    }
+
+    .rating-text {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    /* Show the More button only on mobile */
+    .more-cards-btn {
+        display: block;
+        font-size: 1.2rem;
+        padding: 0.8rem 2.5rem;
+        margin: 2rem auto 1rem;
+        width: 180px;
+        order: 4;
+        /* Position after the first 3 cards */
+        align-self: center;
+    }
+
+    /* Hide the last three cards by default on mobile */
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .nav-logo img {
-        height: 40px;
+        height: 100px;
+        width: auto;
+        max-width: none;
+    }
+
+    .nav-logo {
+        flex: 0 0 auto;
+        margin-right: auto;
     }
 
     .mobile-menu-btn {
-        font-size: 1.5rem;
+        font-size: 3rem;
+        padding: 0.4rem;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .search-box {
         width: 95%;
-        bottom: 500px;
+        bottom: 450px;
+        padding: 0.6rem;
     }
 
     .search-content {
-        gap: 0.3rem;
+        gap: 0.6rem;
     }
 
     .search-item {
-        padding: 0.2rem 0.5rem;
+        padding: 0.5rem;
     }
 
     .search-label {
-        font-size: 11px;
+        font-size: 0.9rem;
+        padding-left: 24px;
     }
 
     .search-value {
-        font-size: 0.75rem;
+        font-size: 1.1rem;
+        padding-left: 24px;
+    }
+
+    .search-icon {
+        width: 18px;
+        height: 18px;
+        top: -4px;
+    }
+
+    .hero-content {
+        margin-top: -8px;
+        padding: 0 1.5rem;
     }
 
     .hero-title h1 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .hero-title h1 span {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .hero-title h1 span:first-child {
+        font-size: 3.5rem;
+        width: 100%;
+        display: block;
+        letter-spacing: 1px;
+        margin-bottom: 0.2rem;
+    }
+
+    .hero-title h1 span:nth-child(2) {
+        display: block;
+        width: 100%;
     }
 
     .hero-title p {
-        font-size: 0.9rem;
-        margin-bottom: 1.8rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+        font-style: italic;
+        max-width: 100%;
+        padding-right: 1rem;
     }
 
     .hero-buttons {
-        max-width: 240px;
-        gap: 2.5rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .learn-more-btn,
     .get-started-btn {
-        padding: 0.7rem 0;
-        font-size: 0.95rem;
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
     }
 
     .timer-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        padding: 0 1rem;
     }
 
     .timer-box {
-        min-width: calc(50% - 0.5rem);
+        min-width: 120px;
+        padding: 1rem;
+        background: #f0f0f0;
+        border-radius: 12px;
+    }
+
+    .timer-box .number {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+
+    .timer-box .label {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
     }
 
     .flags-grid {
@@ -1658,8 +1862,8 @@ html {
 
     .partner-logos {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        padding: 0 1.5rem;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 
     .partner-logo {
@@ -1671,81 +1875,101 @@ html {
         justify-content: center;
     }
 
+    .wave-container {
+        height: 500px;
+        background-color: #DA9B2A;
+        margin-top: 2rem;
+    }
+
     .wave-svg {
-        bottom: -310px;
-        transform: scale(2, 1.8) translateY(20px);
-        height: 200%;
+        display: none;
     }
 
     .search-dropdown {
         width: 95%;
+        padding: 0.6rem 0;
+    }
+
+    .dropdown-item {
+        padding: 0.7rem 1rem;
+        font-size: 1.2rem;
+        color: #DA9B2A;
+        font-weight: 500;
+    }
+
+    .search-dropdown.calendar {
+        padding: 0.6rem;
+    }
+
+    .search-dropdown.calendar input {
+        padding: 0.7rem;
+        font-size: 1.2rem;
+        width: 100%;
     }
 
     .intro-section {
-        bottom: 460px;
+        bottom: 225px;
         padding: 8px;
     }
 
     .intro-section h3 {
-        font-size: 0.75rem;
+        font-size: 1.9rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
 
     .intro-section p {
-        font-size: 0.55rem;
+        font-size: 1.1rem;
+        line-height: 1.3;
+        white-space: normal;
+        padding: 0 0.5rem;
+        opacity: 1;
+    }
+
+    .intro-section h3 span {
+        color: #87298A;
+        font-weight: 600;
     }
 
     .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-        max-width: 100%;
-        padding: 0 0.3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        padding: 0 1rem;
     }
 
     .card {
-        padding-bottom: 0.2rem;
+        padding-bottom: 0.8rem;
     }
 
     .card-image {
-        height: 70px;
+        height: 140px;
+        border-radius: 12px;
     }
 
     .card h3 {
-        font-size: 0.6rem;
-        margin: 0.2rem 0;
-        padding: 0 0.2rem;
+        font-size: 1.2rem;
+        margin: 0.6rem 0;
+        padding: 0 0.4rem;
+        line-height: 1.3;
+        font-weight: 500;
     }
 
     .card p {
-        font-size: 0.5rem;
-        margin-bottom: 0.3rem;
-        padding: 0 0.2rem;
-        display: block;
-        overflow: visible;
-        height: auto;
-        min-height: auto;
-        line-height: 1.3;
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+        padding: 0 0.4rem;
+        line-height: 1.4;
+        color: #1A1A1A;
     }
 
     .card .learn-more {
-        padding: 0.15rem 0.5rem;
-        font-size: 0.55rem;
-    }
-
-    .hero-content {
-        margin-top: 80px;
-        margin-bottom: 20px;
-    }
-
-    .hero-section {
-        padding-bottom: 10px;
-    }
-
-    .search-box {
-        bottom: 500px;
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
     }
 
     .cards-section {
-        margin-top: 120px;
+        margin-top: 290px;
+        background-color: #DA9B2A;
     }
 
     .book-btn {
@@ -1755,32 +1979,45 @@ html {
     }
 
     .countdown-section h2 {
-        font-size: 1rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
 
     .countdown-section p {
-        font-size: 0.6rem;
-        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .timer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        padding: 0 1rem;
     }
 
     .timer-box {
-        min-width: 50px;
-        padding: 0.6rem 0.4rem;
+        min-width: 120px;
+        padding: 1rem;
+        background: #f0f0f0;
+        border-radius: 12px;
     }
 
     .timer-box .number {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
+        font-weight: 600;
     }
 
     .timer-box .label {
-        font-size: 0.6rem;
-        margin-top: 0.2rem;
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
     }
 
     .view-tour {
-        padding: 0.3rem 1.2rem;
-        font-size: 0.75rem;
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        min-width: 180px;
     }
 
     .why-choose-section {
@@ -1789,24 +2026,29 @@ html {
     }
 
     .why-choose-section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
 
     .why-choose-section>p {
-        font-size: 0.65rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.3;
+        padding: 0 0.5rem;
     }
 
     .why-choose-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem 0.8rem;
-        max-width: 100%;
+        gap: 1.5rem;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .why-choose-card {
-        max-width: 100%;
-        padding: 0.8rem;
+        max-width: 250px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .country-wave-svg {
@@ -1851,13 +2093,13 @@ html {
     }
 
     .tour-deals h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
     }
 
     .tour-deals p {
-        font-size: 0.65rem;
-        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
 
     .tour-wave-svg {
@@ -1873,13 +2115,13 @@ html {
     }
 
     .journey-section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
     }
 
     .journey-subtitle {
-        font-size: 0.65rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 
     .testimonial-images {
@@ -1893,19 +2135,26 @@ html {
     }
 
     .partners-section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
     }
 
     .partners-subtitle {
-        font-size: 0.65rem;
-        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .partner-cta {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .partner-logos {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 0 1rem;
+        gap: 2rem;
+        padding: 0 2rem;
+        align-items: center;
     }
 
     .partner-logo {
@@ -1916,6 +2165,54 @@ html {
         width: auto;
         min-width: 120px;
         padding: 0.3rem 1rem;
+    }
+
+    .tour-features {
+        gap: 0.7rem;
+        padding: 0 0.8rem;
+    }
+
+    .feature {
+        gap: 0.7rem;
+        align-items: center;
+    }
+
+    .feature .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .feature span:not(.dot) {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .rating {
+        gap: 0.4rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .rating-label {
+        font-size: 1.1rem;
+    }
+
+    .stars {
+        gap: 0.2rem;
+    }
+
+    .star {
+        font-size: 1.3rem;
+    }
+
+    .rating-text {
+        font-size: 1.1rem;
+    }
+
+    .more-cards-btn {
+        font-size: 1.1rem;
+        padding: 0.7rem 2rem;
+        margin: 1.5rem auto;
+        width: 150px;
     }
 }
 
@@ -1949,5 +2246,47 @@ html {
         width: 140%;
         left: -20%;
         transform: scale(2.4, 1) translateY(20px);
+    }
+}
+
+/* More button styles for why-choose-section */
+.more-cards-btn {
+    display: none;
+    background: linear-gradient(to bottom, #87298A99, #DA9B2A);
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.5rem auto;
+    grid-column: 1 / -1;
+}
+
+/* Show/hide classes for mobile cards */
+.show-mobile,
+.hide-mobile {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Show the More button only on mobile */
+    .more-cards-btn {
+        display: block;
+        font-size: 1.2rem;
+        padding: 0.8rem 2.5rem;
+        margin: 2rem auto 1rem;
+        width: 180px;
+    }
+
+    /* Hide the last three cards by default on mobile */
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
     }
 }

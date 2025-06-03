@@ -25,7 +25,15 @@ import parisImg from '../assets/images/paris.png'
 import user1 from '../assets/images/user1.png'
 import user2 from '../assets/images/user2.png'
 import user3 from '../assets/images/user3.png'
-import cokeImg from '../assets/images/coke.png'
+import partner1 from '../assets/images/partner1.png'
+import partner2 from '../assets/images/partner2.png'
+import partner3 from '../assets/images/partner3.png'
+import partner4 from '../assets/images/partner4.png'
+import partner5 from '../assets/images/partner5.png'
+import partner6 from '../assets/images/partner6.png'
+import partner7 from '../assets/images/partner7.png'
+import partner8 from '../assets/images/partner8.png'
+import partner9 from '../assets/images/partner9.png'
 import './styles.css'
 
 function Home() {
@@ -35,6 +43,9 @@ function Home() {
         minutes: 14,
         seconds: 14
     });
+
+    // Add state for showing more cards
+    const [showMoreCards, setShowMoreCards] = useState(false);
 
     // Add new state for search box
     const [searchValues, setSearchValues] = useState({
@@ -396,19 +407,26 @@ function Home() {
                                     <p>We tailor solutions to fit your budget—no hidden fees, no stress.</p>
                                 </div>
 
-                                <div className="why-choose-card">
+                                <button
+                                    className="more-cards-btn"
+                                    onClick={() => setShowMoreCards(!showMoreCards)}
+                                >
+                                    {showMoreCards ? "Show Less" : "More"}
+                                </button>
+
+                                <div className={`why-choose-card ${showMoreCards ? 'show-mobile' : 'hide-mobile'}`}>
                                     <img src={trustIcon} alt="Trust icon" className="trust-icon" />
                                     <h3>Expert<br />Support</h3>
                                     <p>Our experienced team is always ready to guide you—every step of the way.</p>
                                 </div>
 
-                                <div className="why-choose-card">
+                                <div className={`why-choose-card ${showMoreCards ? 'show-mobile' : 'hide-mobile'}`}>
                                     <img src={trustIcon} alt="Trust icon" className="trust-icon" />
                                     <h3>Secure & Confidential</h3>
                                     <p>We prioritize your privacy and handle your information with the highest standards of security.</p>
                                 </div>
 
-                                <div className="why-choose-card">
+                                <div className={`why-choose-card ${showMoreCards ? 'show-mobile' : 'hide-mobile'}`}>
                                     <img src={trustIcon} alt="Trust icon" className="trust-icon" />
                                     <h3>Real Results, Real Stories</h3>
                                     <p>Don't just take our word for it—see what our happy clients have to say.</p>
@@ -574,9 +592,15 @@ function Home() {
                             <p className="partners-subtitle">Together, we create seamless travel experiences and global opportunities.</p>
 
                             <div className="partner-logos">
-                                {[...Array(6)].map((_, i) => (
-                                    <img key={i} src={cokeImg} alt="Partner logo" className="partner-logo" />
-                                ))}
+                                <img src={partner1} alt="Partner 1" className="partner-logo" />
+                                <img src={partner2} alt="Partner 2" className="partner-logo" />
+                                <img src={partner3} alt="Partner 3" className="partner-logo" />
+                                <img src={partner4} alt="Partner 4" className="partner-logo" />
+                                <img src={partner5} alt="Partner 5" className="partner-logo" />
+                                <img src={partner6} alt="Partner 6" className="partner-logo" />
+                                <img src={partner7} alt="Partner 7" className="partner-logo" />
+                                <img src={partner8} alt="Partner 8" className="partner-logo" />
+                                <img src={partner9} alt="Partner 9" className="partner-logo" />
                             </div>
 
                             <p className="partner-cta">Looking to partner with us? Let's build a future of seamless global connections together.</p>

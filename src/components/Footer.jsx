@@ -23,15 +23,15 @@ function Footer() {
                     <div className="contact-info">
                         <div className="contact-item">
                             <span className="icon">📍</span>
-                            <span>Address: [Your Office Address]</span>
+                            <span>Address: Head office Address: Suit 19, Adelabu Shopping Complex, indomie building, orita challenge Ibadan.</span>
                         </div>
                         <div className="contact-item">
                             <span className="icon">📞</span>
-                            <span>Phone: [Phone Number]</span>
+                            <span>Phone: 09060667490, 09167429489</span>
                         </div>
                         <div className="contact-item">
                             <span className="icon">✉️</span>
-                            <span>Email: [Support Email]</span>
+                            <span>Email:Info@grazconcept.com.ng</span>
                         </div>
                         <div className="contact-item">
                             <span className="icon">🕐</span>
