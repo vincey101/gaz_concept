@@ -1,6 +1,8 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useState, useEffect, useRef } from 'react'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 import backgroundImage from '../assets/images/background.png'
 import waveSvg from '../assets/wave.svg'
 import countryWaveSvg from '../assets/country-wave.svg'
@@ -36,6 +38,7 @@ import partner8 from '../assets/images/partner8.png'
 import partner9 from '../assets/images/partner9.png'
 import './styles.css'
 
+
 function Home() {
     const [timeLeft, setTimeLeft] = useState({
         days: 14,
@@ -61,6 +64,8 @@ function Home() {
 
     // Add state for showing more cards
     const [showMoreCards, setShowMoreCards] = useState(false);
+
+    const [selectedDate, setSelectedDate] = useState(null);
 
     // Predefined options
     const destinations = [
@@ -155,6 +160,24 @@ function Home() {
         // Cleanup interval on component unmount
         return () => clearInterval(timer);
     }, []); // Empty dependency array means this effect runs once on mount
+
+    // Update handleDateChange for react-datepicker
+    const handleDateChange = (date) => {
+        setSelectedDate(date);
+        const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + 'th';
+        handleSelect('date', formattedDate);
+        // Close the dropdown after selection
+        setIsOpen(prev => ({
+            ...prev,
+            date: false
+        }));
+    };
+
+    // Add handler for calendar clicks
+    const handleCalendarClick = (e) => {
+        // Prevent click from bubbling up and closing the dropdown
+        e.stopPropagation();
+    };
 
     return (
         <div className="wrapper">
@@ -266,13 +289,23 @@ function Home() {
                                         <img src={calenderIcon} alt="calendar" className="search-icon" />
                                         <div className="search-value">{searchValues.date}</div>
                                         {isOpen.date && (
-                                            <div className="search-dropdown calendar">
-                                                <input
-                                                    type="date"
-                                                    onChange={(e) => {
-                                                        handleSelect('date', formatDate(e.target.value));
+                                            <div className="search-dropdown calendar" onClick={handleCalendarClick}>
+                                                <DatePicker
+                                                    selected={selectedDate}
+                                                    onChange={handleDateChange}
+                                                    dateFormat="MMM d'th'"
+                                                    minDate={new Date()}
+                                                    placeholderText="Select a date"
+                                                    className="custom-date-input"
+                                                    inline
+                                                    disabledKeyboardNavigation
+                                                    shouldCloseOnSelect={true}
+                                                    onClickOutside={() => {
+                                                        setIsOpen(prev => ({
+                                                            ...prev,
+                                                            date: false
+                                                        }));
                                                     }}
-                                                    onClick={(e) => e.stopPropagation()}
                                                 />
                                             </div>
                                         )}
