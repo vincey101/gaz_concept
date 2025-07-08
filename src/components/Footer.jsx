@@ -10,20 +10,20 @@ function Footer() {
                 <div className="footer-left">
                     <img src={footerLogo} alt="Grazconcept Logo" className="footer-logo" />
                     <p className="company-description">
-                        <span className="company-name">Grazconcept Nig. LTD</span> is a dynamic solutions
+                        <span className="company-name">Grazconcept Innovation & multipurpose LTD</span> is a dynamic solutions
                         provider committed to simplifying global travel,
                         education, and lifestyle services for individuals
                         and families across the world. From tailored tour
                         packages, flight bookings, and visa assistance to
                         education financing, global access programs, and
-                        digital solutions like VTU services—we make
+                        digital solutions like Value-Added Services—we make
                         international dreams more accessible, affordable,
                         and stress-free.
                     </p>
                     <div className="contact-info">
                         <div className="contact-item">
                             <span className="icon">📍</span>
-                            <span>Address: Head office Address: Suit 19, Adelabu Shopping Complex, indomie building, orita challenge Ibadan.</span>
+                            <span>Head office Address: Suit 19, Adelabu Shopping Complex, indomie building, orita challenge Ibadan.</span>
                         </div>
                         <div className="contact-item">
                             <span className="icon">📞</span>
@@ -70,7 +70,7 @@ function Footer() {
                             <li><a href="#visa">Visa Assistance</a></li>
                             <li><a href="#education">Education Finance</a></li>
                             <li><a href="#citizenship">Global Citizenship</a></li>
-                            <li><a href="#vtu">VTU Solutions</a></li>
+                            <li><a href="#vtu">Value Added Services</a></li>
                             <li><a href="#jobs">Job & School Search</a></li>
                             <li><a href="#savings">Savings Plans</a></li>
                         </ul>
@@ -100,7 +100,7 @@ function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <p>© {currentYear} Grazconcept Nig. LTD. All rights reserved.</p>
+                <p>© {currentYear} Grazconcept Innovation & multipurpose LTD. All rights reserved.</p>
             </div>
         </footer>
     )

@@ -19,14 +19,14 @@ import card5 from '../assets/images/card5.png'
 import card6 from '../assets/images/card6.png'
 import card7 from '../assets/images/card7.png'
 import card8 from '../assets/images/card8.png'
-import germanyFlag from '../assets/images/germany.png'
-import americaFlag from '../assets/images/america.png'
+// import germanyFlag from '../assets/images/germany.png'
+// import americaFlag from '../assets/images/america.png'
 import dubaiImg from '../assets/images/dubai.png'
 import zanzibarImg from '../assets/images/zanzibar.png'
 import parisImg from '../assets/images/paris.png'
-import user1 from '../assets/images/user1.png'
+import user1 from '../assets/images/african.jpeg'
 import user2 from '../assets/images/user2.png'
-import user3 from '../assets/images/user3.png'
+import user3 from '../assets/images/ghanian.jpeg'
 import partner1 from '../assets/images/partner1.png'
 import partner2 from '../assets/images/partner2.png'
 import partner3 from '../assets/images/partner3.png'
@@ -37,6 +37,7 @@ import partner7 from '../assets/images/partner7.png'
 import partner8 from '../assets/images/partner8.png'
 import partner9 from '../assets/images/partner9.png'
 import './styles.css'
+import { GB, CA, DE, LT, MS, FI, RU, BG, MT, PT, QA, AE, KW, GH, KE, CI } from 'country-flag-icons/react/3x2'
 
 
 function Home() {
@@ -368,9 +369,9 @@ function Home() {
                                 </div>
                                 <div className="card">
                                     <div className="card-image">
-                                        <img src={card6} alt="Manage Subscription" />
+                                        <img src={card6} alt="Manage Application" />
                                     </div>
-                                    <h3>Manage Subscription</h3>
+                                    <h3>Manage Application</h3>
                                     <p>Easily update your preferences and stay in control of what matters.</p>
                                     <button className="learn-more">Learn More</button>
                                 </div>
@@ -386,7 +387,7 @@ function Home() {
                                     <div className="card-image">
                                         <img src={card8} alt="VTU Solution" />
                                     </div>
-                                    <h3>VTU Solution</h3>
+                                    <h3>Value-Added Services</h3>
                                     <p>Recharge airtime, data, and bills instantly—anytime, anywhere.</p>
                                     <button className="learn-more">Learn More</button>
                                 </div>
@@ -473,16 +474,27 @@ function Home() {
                                 <h2>Countries We Serve</h2>
                                 <p>Connecting people across borders - serving clients worldwide.</p>
                                 <div className="flags-grid">
-                                    {[...Array(9)].map((_, i) => (
-                                        <div key={`germany-${i}`} className="flag-item">
-                                            <img src={germanyFlag} alt="Germany flag" />
-                                            <span>Germany</span>
-                                        </div>
-                                    ))}
-                                    {[...Array(9)].map((_, i) => (
-                                        <div key={`us-${i}`} className="flag-item">
-                                            <img src={americaFlag} alt="United States flag" />
-                                            <span>United States</span>
+                                    {[
+                                        { Flag: GB, name: 'United Kingdom' },
+                                        { Flag: CA, name: 'Canada' },
+                                        { Flag: DE, name: 'Germany' },
+                                        { Flag: LT, name: 'Lithuania' },
+                                        { Flag: MS, name: 'Montserrat' },
+                                        { Flag: FI, name: 'Finland' },
+                                        { Flag: RU, name: 'Russia' },
+                                        { Flag: BG, name: 'Bulgaria' },
+                                        { Flag: MT, name: 'Malta' },
+                                        { Flag: PT, name: 'Portugal' },
+                                        { Flag: QA, name: 'Qatar' },
+                                        { Flag: AE, name: 'Dubai' },
+                                        { Flag: KW, name: 'Kuwait' },
+                                        { Flag: GH, name: 'Ghana' },
+                                        { Flag: KE, name: 'Kenya' },
+                                        { Flag: CI, name: 'Ivory Coast' },
+                                    ].map(({ Flag, name }, i) => (
+                                        <div key={name} className="flag-item">
+                                            <Flag title={name} style={{ width: '48px', height: '32px', borderRadius: '4px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }} />
+                                            <span>{name}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -620,7 +632,7 @@ function Home() {
                             </blockquote>
                         </div>
 
-                        <div className="partners-section">
+                        {/* <div className="partners-section">
                             <h2>Our Trusted Partners</h2>
                             <p className="partners-subtitle">Together, we create seamless travel experiences and global opportunities.</p>
 
@@ -638,7 +650,7 @@ function Home() {
 
                             <p className="partner-cta">Looking to partner with us? Let's build a future of seamless global connections together.</p>
                             <button className="become-partner-btn">Become a Partner</button>
-                        </div>
+                        </div> */}
 
                         <Footer />
                     </div>
